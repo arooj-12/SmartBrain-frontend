@@ -65,7 +65,7 @@ import './App.css';
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
   
-    fetch('http://localhost:3001/imageurl', {
+    fetch(process.env.REACT_APP_API + '/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -75,7 +75,7 @@ import './App.css';
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3001/image', {
+          fetch(process.env.REACT_APP_API + '/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
