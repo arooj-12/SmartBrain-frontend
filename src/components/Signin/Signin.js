@@ -20,7 +20,7 @@ class Signin extends React.Component {
   onSubmitSignIn = () => {
     fetch("https://smartbrain-backend-atak.onrender.com/signin", {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: {'Content-Type': 'application/javascript'},
       body: JSON.stringify({
        email: this.state.signInEmail,
        password: this.state.signInPassword

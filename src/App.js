@@ -67,7 +67,7 @@ import './App.css';
   
     fetch("https://smartbrain-backend-atak.onrender.com/imageurl", {
       method: 'post',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {'Content-Type': 'application/javascript'},
       body: JSON.stringify({
         input: this.state.input
       })
@@ -77,7 +77,7 @@ import './App.css';
         if (response) {
           fetch("https://smartbrain-backend-atak.onrender.com/image", {
             method: 'put',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {'Content-Type': 'application/javascript'},
             body: JSON.stringify({
               id: this.state.user.id
             })
