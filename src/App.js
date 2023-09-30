@@ -77,7 +77,7 @@ import './App.css';
         if (response) {
           fetch("https://smartbrain-backend-atak.onrender.com/image", {
             method: 'put',
-            headers: {'Content-Type': 'application/javascript'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               id: this.state.user.id
             })

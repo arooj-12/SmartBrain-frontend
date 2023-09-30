@@ -4,3 +4,5 @@ services:
     routes:
       - path: /SmartBrain-frontend/static/js/*
         contentType: application/javascript
+      - path: /SmartBrain-frontend/static/css/*
+        contentType: text/css
