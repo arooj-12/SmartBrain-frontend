@@ -65,9 +65,9 @@ import './App.css';
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
   
-    fetch("https://smartbrain-backend-atak.onrender.com/imageurl", {
+    fetch('http://localhost:3001/imageurl', {
       method: 'post',
-      headers: {'Content-Type': 'application/javascript'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         input: this.state.input
       })
@@ -75,9 +75,9 @@ import './App.css';
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("https://smartbrain-backend-atak.onrender.com/image", {
+          fetch('http://localhost:3001/image', {
             method: 'put',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               id: this.state.user.id
             })
@@ -139,3 +139,4 @@ import './App.css';
 
 
 export default App;
+
